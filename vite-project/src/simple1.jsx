@@ -1,18 +1,43 @@
-import App from "./App";
+import { useState } from "react";
 
 
 function Chai()
 {
+  let [counter,setCounter]=useState(0)
+
+
+  //let counter=0;
+  const addvalue=()=>{
+
+    
+    console.log("value added",counter);
+    //counter=counter+1
+    setCounter(counter+1)
+    
+  }
+  const decreasevalue=()=>{
+   
+    counter=counter-1
+    setCounter(counter)
+
+    
+  }
+
     return (
       <>
 
-<App/>
 
-       <h1>
-         your chai is ready 
-        </h1>
+
       
-        <p>  Hello , I am learning react !!  </p>
+
+        <button onClick={addvalue}>add value{counter}</button>
+        <button onClick={decreasevalue}>decrease value </button>
+      
+        <h2>
+        counter value :{counter}
+
+        
+        </h2>
 
          
       </>
