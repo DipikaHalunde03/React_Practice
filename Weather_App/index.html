@@ -17,9 +17,16 @@
             color: #ffffff; /* Set default text color to white for better contrast */
         }
          #navBar {
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            top: 0;
+            
             color: white;
             
             background-color: #343a40; /* Dark Gray Background */
+
+        
         }
         #navBar .navbar-brand {
             color: #ffcc00; /* Golden Yellow for Brand */
@@ -66,19 +73,23 @@
         }
            /* Custom Card Styles */
            .card {
+           
             border-radius: 10px;
             overflow: hidden;
             border: 2px solid #343a40; /* Dark Gray Border */
         }
+        
 
         .card-header {
-            background-color: #53e3eb; /* Golden Yellow Background for Header */
+         
+            background-color: #72f0f3; /* Golden Yellow Background for Header */
             color: #343a40; /* Dark Text */
             font-weight: bold;
             border-bottom: 2px solid #343a40; /* Dark Gray Border Bottom */
         }
 
         .card-body {
+          
             background-color: #f8f9fa; /* Light Gray Background for Body */
             color: #343a40; /* Dark Text */
         }
@@ -96,7 +107,7 @@
 
         .card-body ul li span {
             font-weight: bold; /* Bold for Span Elements */
-            color: #63d9fa; /* Golden Yellow for Highlighted Values */
+            color: #e44848; /* Golden Yellow for Highlighted Values */
         }
 
         .text-bg-primary {
@@ -115,6 +126,9 @@
         .shadow-sm {
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle Shadow for Depth */
         }
+
+     
+      
     </style>
 </head>
   <body>
@@ -153,7 +167,7 @@
     </nav>
 
     <div class="container" id="back">
-        <h1 class="my-4 text-center">Weather of <span id="cityName"></span></h1>
+        <h1 class="my-4 text-center" style="padding-top: 80px;">Weather of <span id="cityName"></span></h1>
         <main>
             <div class="container my-5">
                 <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
@@ -201,7 +215,7 @@
                                     <li>Wind Speed is <span id='wind_speed'></span></li>
                                     <li>Wind Degrees is <span id='wind_degrees'></span></li>
                                     <li>dewpoint -C<span id='sunrise'></span></li>
-                                    <li>dewpoint -F <span id='sunset'></span></li>
+                                    <!-- <li>dewpoint -F <span id='sunset'></span></li> -->
                                 </ul>
                             </div>
                         </div>
